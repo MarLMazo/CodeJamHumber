@@ -1,0 +1,202 @@
+﻿/*
+	This file will be where you will write your CSS (cascading style sheets)
+	
+	To learn more about CSS, try visiting this link
+	
+	https://www.w3schools.com/css/
+	
+*/
+html{
+    box-sizing: border-box;
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+   text-decoration: none; 
+   color:#ffff;
+}
+
+/****--Header--****/
+
+#header{
+    background-color: #708090;
+    padding: 1em 5%;
+    color: #ffff;
+}
+
+#logo img{
+    width: 5em;
+    height: 5em;
+    margin: auto;
+    display: block;
+}
+#logo{
+    display: inline-block;
+    font-weight: bolder;
+}
+#header ul li{
+    display: inline-block;
+    padding-left: 1em;
+    font-weight: 600;
+}
+header .wrapper{
+    display: inline-block;
+}
+#nav-main{   
+    text-align: right;
+}
+
+
+/*****-- MAIN--******/
+main{
+    margin: 2em 5%;
+}
+#main-wrapper{
+
+    display: flex;
+    flex-direction: row;
+}
+
+h1{
+    font-weight: 500;
+    margin: 2em 0;
+    font-size: 1.5em;
+}
+
+/********--ASIDE--*********/
+aside{
+    width: 50%;
+    text-align: center;
+}
+
+#tshirtImage:hover{
+    background-image: url('/week8_codejam_starterkit_vanilla/root/images/merch_highlight.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80%;
+}
+#tshirtImage{
+    margin: 1em;
+    width: 20em;
+}
+
+
+
+/*******-- SECTION --*******/
+section{
+    width: 50%;
+    margin: 0; 
+}
+
+main h2{
+    font-size: 1.5em;
+}
+#formOrder{
+    padding: 1em 0;
+}
+#formOrder div {
+    padding-top: 1em;
+}
+/* #formOrder div>*:nth-child(2){
+    text-align: right;
+} */
+#tshirtColor{
+    padding-top: 1em;
+}
+
+#tshirtColor input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+#tshirtColor label{
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    border: 2px solid #444;
+    border-radius: 4px;
+}
+label[for="White"]{
+    background-color: #ffff;
+}
+
+label[for="Black"]{   
+    background-color: #000000;
+}
+
+label[for="Red"]{  
+    background-color: #ff0000;
+}
+
+label[for="Blue"]{   
+    background-color: #0000ff;
+}
+
+label[for="Green"]{ 
+    background-color: #11ff00;
+}
+
+label[for="Purple"]{
+    background-color: #800080;
+}
+
+
+
+
+#errorMessage{
+    width: 20%;
+    height: 5em;
+    padding: 1em;
+    background-color: red;
+    border: 1px solid #000000;
+    color: white;
+    margin:auto;
+    visibility: hidden;
+    font-size: 1em;
+}
+
+main>div:last-child{
+    text-align: center;
+}
+
+main button{
+    height: 3em;
+    width: 10%;
+}
+
+
+/****--Footer--*******/
+#footer{
+    background-color: #1e1e1e;    
+    color:#ffffff;
+ 
+
+}
+
+#footer-wrapper{
+    padding: 1em 0;
+    margin: auto 5%;
+}
+
+
+
+/*
+	Attributes below
+	----------------
+    T-Shirt Images Taken from user "originalmicheal"
+    https://purepng.com/originalmichael
+    License: Free for commercial use with Attribution Required
+    
+    Jam icon
+    <a href="https://icon-library.net/icon/jam-icon-26.html">Jam Icon #37164</a>
+    License: CC0 for personal use
+    
+    Code Challenge Developed by Christine Bittle
+*/

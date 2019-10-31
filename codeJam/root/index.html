@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Merchandise</title>
+    <link href="    styles/bittsreset.css" rel="stylesheet" type="text/css" />
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap" rel="stylesheet">
+    <script src="scripts/validate.js"></script>
+    <script src="scripts/main.js"></script>
+</head>
+<body>
+    <header id="header">
+        <div id="header-wrapper">
+        <!-- CODE JAM REQUIREMENTS -->
+        <!--
+        	The code Jam requirements are for you to build a website!
+        
+        	- please see source/design.png for the "look" of the website
+        	- please see root/images/ for the images that are provided to you
+        	- please go to this youtube link to see what an example finished product would look like
+        	
+        	https://www.youtube.com/watch?v=iXIfw2V0RC0
+        
+        
+        
+        -->
+
+        <!--Header b-color = #708090-->
+        <div id="logo">
+            <a href="/" ><img src="images/codejamlogo.jpg" alt="Company Logo"/></a>
+            <label>HTTP Week 8</label>
+        </div>
+            <nav id="nav-main">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Merchandise</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Merchandise</h1>
+        <div id="main-wrapper">
+            <aside>
+                <div id="tshirtDesc">
+                    <p>Small Plain White T-shirt</p>
+                </div>
+                <div>
+                    <img id="tshirtImage" src="images/tshirt-white.png" alt="white tshirt"/>
+                </div>
+            </aside>
+            <section>
+                <h2>Your Order</h2>
+                <form method="GET" action="https://postman-echo.com/get" id="formOrder" onsubmit="return validateForm()">
+                    <div>
+                        <label>Select Colour:</label>
+                        <div id="tshirtColor">
+                            <input id="White" type="radio" name="tshirtColor" value="White"/>
+                            <label for="White"></label>
+                            <input id="Black" type="radio" name="tshirtColor" value="Black"/>
+                            <label for="Black"></label>
+                            <input id="Red" type="radio" name="tshirtColor" value="Red"/>
+                            <label for="Red"></label>
+                            <input id="Blue" type="radio" name="tshirtColor" value="Blue"/>
+                            <label for="Blue"></label>
+                            <input id="Green" type="radio" name="tshirtColor" value="Green"/>
+                            <label for="Green"></label>
+                            <input id="Purple" type="radio" name="tshirtColor" value="Purple"/>
+                            <label for="Purple"></label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>Choose Size:</label>
+                        <select id="tshirtSize">
+                            <option value = "Small">Small</option>          
+                            <option value = "Medium">Medium</option>    
+                            <option value = "Large">Large</option>    
+                        </select>
+                    </div>
+                    <div>
+                        <label>Style:</label>
+                        <select id="tshirtStyle">       
+                            <option value = "Plain">Plain</option>    
+                            <option value = "Crew cut">Crew Cut(+$2.00)</option>   
+                            <option value = "V-neck">V-Neck(+$5.00)</option>         
+                            <option value = "Baseball">Baseball($1.00)</option>     
+                        </select>   
+                    </div>
+                    <div>
+                        <label for="customerName">Name:</label>
+                        <input type="text" id="customerName" name="customerName"/>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="customerAddress">Address:</label>
+                        </div>
+                        <textarea id="customerAddress" name="customerAddress" rows="5" cols="50"></textarea>
+                    </div>
+                    <div>
+                        <label>Delivery Type:</label>
+                        <input type="radio" id="normalDelivery" name="DeliveryTime" value="normal" checked>
+                        <label for="normalDelivery">Normal</label>
+                        <input type="radio" id="expressDelivery" name="DeliveryTime" value="express">
+                        <label for="expressDelivery">Express</label>
+                    </div>
+                    
+                </form>
+            </section>
+        </div>
+        <div>
+            <div id="errorMessage"></div>
+            <button type = "submit" value="Submit" form="formOrder">ORDER</button>
+        </div>
+    </main>
+    <footer id="footer" >
+        <div id="footer-wrapper">
+            <p>This website is for educational purposes only</p>
+        <!--footer b-color = #1e1e1e-->
+        </div>
+    </footer>
+</body>
+</html>
